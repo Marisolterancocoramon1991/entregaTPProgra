@@ -26,7 +26,7 @@
 
         public function InsertarProducto(){
             $objetoAccsesoDatos = AccesoDatos::dameUnObjetoAcceso();
-            $consulta = $objetoAccsesoDatos->RetornarConsulta("INSERT INTO `productos`(`nombre`, `precio`, `tiempoEleboracion`, `sector`) 
+            $consulta = $objetoAccsesoDatos->RetornarConsulta("INSERT INTO `productos`(`nombre`, `precio`, `tiempoElaboracion`, `sector`) 
             VALUES ('$this->nombre','$this->precio','$this->tiempoElaboracion','$this->sector')");
             $consulta->execute();
             return $objetoAccsesoDatos->RetornarUltimoIdInsertado();
@@ -34,7 +34,7 @@
 
         public function insertarProductoParametros(){
             $objetoAccsesoDatos = AccesoDatos::dameUnObjetoAcceso();
-            $consulta = $objetoAccsesoDatos->RetornarConsulta("INSERT INTO `productos`(`nombre`, `precio`, `tiempoEleboracion`, `sector`) 
+            $consulta = $objetoAccsesoDatos->RetornarConsulta("INSERT INTO `productos`(`nombre`, `precio`, `tiempoElaboracion`, `sector`) 
             VALUES (:nombre,:precio ,:tiempoElaboracion, :sector)");
             $consulta->bindValue(':nombre',$this->nombre,PDO::PARAM_STR);
             $consulta->bindValue(':precio',$this->precio,PDO::PARAM_INT);
