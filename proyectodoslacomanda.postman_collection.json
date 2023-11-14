@@ -1,0 +1,729 @@
+{
+	"info": {
+		"_postman_id": "cadb8d41-c7c0-440f-8a72-b9546e470628",
+		"name": "proyectodoslacomanda",
+		"description": "segundo_parcial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29810521"
+	},
+	"item": [
+		{
+			"name": "CrearUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "vicente",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "teran",
+							"type": "text"
+						},
+						{
+							"key": "dni",
+							"value": "45433068",
+							"type": "text"
+						},
+						{
+							"key": "estadoLaboral",
+							"value": "tiempo completo",
+							"type": "text"
+						},
+						{
+							"key": "edad",
+							"value": "45",
+							"type": "text"
+						},
+						{
+							"key": "sector",
+							"value": "bartender",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "losturros4545",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "elquemanda@gmial.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"crear"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ModificarUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "kervin",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "briceño",
+							"type": "text"
+						},
+						{
+							"key": "dni",
+							"value": "95933062",
+							"type": "text"
+						},
+						{
+							"key": "estadoLaboral",
+							"value": "temporal",
+							"type": "text"
+						},
+						{
+							"key": "edad",
+							"value": "45",
+							"type": "text"
+						},
+						{
+							"key": "sector",
+							"value": "cocina",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/modificarUsuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"modificarUsuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarUsuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios/eliminar/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"eliminar",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TraerUnUsuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios/traerUno/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"traerUno",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "traerUsuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios/traerTodos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"traerTodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearMesa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idMozo",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "codigoNumerico",
+							"value": "555554",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "desocupado",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/mesas/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mesas",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificarMesa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idMozo",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "codigoNumerico",
+							"value": "33333",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "libre",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/mesas/modificar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mesas",
+						"modificar",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarMesa",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mesas/eliminar/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mesas",
+						"eliminar",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "traerMesas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mesas/traerTodas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mesas",
+						"traerTodas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "traerUnaMesa",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mesas/traerUna/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mesas",
+						"traerUna",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CrearProducto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "pasta con queso",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "1500",
+							"type": "text"
+						},
+						{
+							"key": "tiempoElaboracion",
+							"value": "00:10:00",
+							"type": "text"
+						},
+						{
+							"key": "sector",
+							"value": "cocina",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/productos/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificarProducto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "pasta a la boloña",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "1600",
+							"type": "text"
+						},
+						{
+							"key": "tiempoElaboracion",
+							"value": "00:15:00",
+							"type": "text"
+						},
+						{
+							"key": "sector",
+							"value": "cocina",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/productos/modificar/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"modificar",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarProducto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/producto/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"producto",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "traerProductos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/productos/traerTodos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"traerTodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TraerUnProducto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/productos/traerUno/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"traerUno",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoggearUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Luis",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "González",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "luis.gonzalez@example.com",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "contrasenia123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/LoggearUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"LoggearUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearPedido",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigoMesa",
+							"value": "87945",
+							"type": "text"
+						},
+						{
+							"key": "dniMozo",
+							"value": "2131",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "Servido",
+							"type": "text"
+						},
+						{
+							"key": "tiempoOrden",
+							"value": "00:50:00",
+							"type": "text"
+						},
+						{
+							"key": "tiempoMaximo",
+							"value": "00:60:00",
+							"type": "text"
+						},
+						{
+							"key": "tiempoEntrega",
+							"value": "00:40:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/pedidos/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pedidos",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificarPedido",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigoMesa",
+							"value": "122121",
+							"type": "text"
+						},
+						{
+							"key": "dniMozo",
+							"value": "1221",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "desocupado",
+							"type": "text"
+						},
+						{
+							"key": "tiempoOrden",
+							"value": "00:50:00",
+							"type": "text"
+						},
+						{
+							"key": "tiempoMaximo",
+							"value": "00:30:00",
+							"type": "text"
+						},
+						{
+							"key": "tiempoEntrega",
+							"value": "00:20:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/pedidos/modificar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pedidos",
+						"modificar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarPedido",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pedidos/eliminar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pedidos",
+						"eliminar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "traerTodosPedido",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pedidos/traerTodos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pedidos",
+						"traerTodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "traerUnPedidos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pedidos/traerUno/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pedidos",
+						"traerUno",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

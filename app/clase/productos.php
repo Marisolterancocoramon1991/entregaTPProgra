@@ -47,15 +47,14 @@
 
         public static function traerTodosLosProductos(){
             $objetoAccsesoDatos = AccesoDatos::dameUnObjetoAcceso();
-            $consulta = $objetoAccsesoDatos->RetornarConsulta("SELECT `id`, `nombre`, `precio`, `tiempoEleboracion`, `sector` 
-            FROM `productos` ");
+            $consulta = $objetoAccsesoDatos->RetornarConsulta("SELECT * FROM `productos` WHERE 1");
             $consulta->execute();
             return $consulta->fetchAll(PDO::FETCH_CLASS,"producto");
         }
 
         public static function TraerUnProducto($id){
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
-            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT `id`, `nombre`, `precio`, `tiempoEleboracion`, `sector` 
+            $consulta = $objetoAccesoDato->RetornarConsulta("SELECT `id`, `nombre`, `precio`, `tiempoElaboracion`, `sector` 
             FROM `productos` 
             WHERE id = $id");
             $consulta->execute();
@@ -66,7 +65,7 @@
         public function modificarProducto(){
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
             $consulta = $objetoAccesoDato->RetornarConsulta("UPDATE `productos` 
-            SET `nombre`='$this->nombre',`precio`= '$this->precio',`tiempoEleboracion`='$this->tiempoElaboracion',`sector`='$this->sector' 
+            SET `nombre`='$this->nombre',`precio`= '$this->precio',`tiempoElaboracion`='$this->tiempoElaboracion',`sector`='$this->sector' 
             WHERE id = '$this->id'");
             return $consulta->execute();
         }
@@ -74,7 +73,7 @@
         public function modificarProductoParametros(){
             $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
             $consulta = $objetoAccesoDato->RetornarConsulta("UPDATE `productos` 
-            SET `nombre`= :nombre,`precio`= :precio,`tiempoEleboracion`= :tiempoElaboracion,`sector`= :sector 
+            SET `nombre`= :nombre,`precio`= :precio,`tiempoElaboracion`= :tiempoElaboracion,`sector`= :sector 
             WHERE id = :id");
     
             $consulta->bindValue(':id',$this->id,PDO::PARAM_INT);

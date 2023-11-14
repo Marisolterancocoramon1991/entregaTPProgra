@@ -41,11 +41,11 @@
         public function insertarPedidoParametros(){
             $objetoAccsesoDatos = AccesoDatos::dameUnObjetoAcceso();
             $consulta = $objetoAccsesoDatos->RetornarConsulta("INSERT INTO `pedidos`(`codigoMesa`, `dniMozo`, `estado`, `tiempoOrden`, `tiempoMaximo`, `tiempoEntrega`) 
-            VALUES (:codigoMesa, :dniMozo,:estado, :tiempoEntrega, :tiempoMaximo, :tiempoEntrega)");
+            VALUES (:codigoMesa, :dniMozo,:estado, :tiempoOrden, :tiempoMaximo, :tiempoEntrega)");
             $consulta->bindValue(':codigoMesa',$this->codigoMesa,PDO::PARAM_INT);
             $consulta->bindValue(':dniMozo',$this->dniMozo,PDO::PARAM_INT);
             $consulta->bindValue(':estado',$this->estado,PDO::PARAM_STR);
-            $consulta->bindValue(':tiempoEntrag',$this->tiempoEntrega,PDO::PARAM_STR);
+            $consulta->bindValue(':tiempoOrden',$this->tiempoEntrega,PDO::PARAM_STR);
             $consulta->bindValue(':tiempoMaximo',$this->tiempoMaximo,PDO::PARAM_STR);
             $consulta->bindValue(':tiempoEntrega',$this->tiempoEntrega,PDO::PARAM_STR);
             $consulta->execute();
