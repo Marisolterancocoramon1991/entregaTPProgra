@@ -58,7 +58,7 @@ class Logger
         $params = $request->getParsedBody();
         $requestType = $request->getMethod();
         if ($requestType == 'POST') {
-            if (empty($params['codigoMesa']) || empty($params['dniMozo']) || empty($params["estado"]) || empty($params["tiempoOrden"]) || empty($params["tiempoMaximo"]) || empty($params["tiempoEntrega"])) {
+            if (empty($params['codigoPedido']) || empty($params['productoId']) || empty($params["mesaId"]) || empty($params["usuarioId"]) || empty($params["estado"]) || empty($params["tiempoOrden"]) || empty($params["tiempoMaximo"]) || empty($params["tiempoEntrega"])) {
                 $response = new Response();
                 $response->getBody()->write(json_encode(['Error' => 'Parametros Vacios']));
                 return $response->withHeader('Content-Type', 'application/json')->withStatus(400);
@@ -68,18 +68,28 @@ class Logger
         return $handler->handle($request);
     }
 
-    public function verificarParametrosVaciosLoginUsuario($request,$handler): Response
+
+    public function verificarParametrosVaciosLoginUsuario($request, $response, $handler): Response
     {
         $params = $request->getParsedBody();
-        $requestType = $request->getMethod();
-        if($requestType == 'POST'){
-            if (empty($params['nombre']) || empty($params['apellido']) || empty($params["mail"]) || empty($params["clave"])) {
-                $response = new Response();
-                $response->getBody()->write(json_encode(['Error' => 'Parametros Vacios']));
-                return $response->withHeader('Content-Type', 'application/json')->withStatus(400);
-            }
-        }
+        $mail = $params["mail"];
+        $clave = $params["clave"];
 
-        return $handler->handle($request);
+        $usuario = usuario::TraerUnUsuarioMailClave($mail, $clave);
+
+        // Obtén una nueva instancia de Response
+        $response = $handler->handle($request); 
+
+        if ($usuario != null) {
+            $data = JwtUtil::CrearToken($usuario);
+            $payload = json_encode(array("Datos usuario" => $data));
+            $response->getBody()->write($payload);
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
+        } else {
+            $payload = json_encode(array("Respuesta" => "No existe el Usuario"));
+            $response->getBody()->write($payload);
+            return $response->withHeader('Content-Type', 'application/json')->withStatus(404);
+        }
     }
+
 }

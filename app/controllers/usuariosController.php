@@ -61,8 +61,8 @@
 
         public function LoggearUsuario($request, $response){
             $data = $request->getParsedBody();
-            $nombre = $data["nombre"];
-            $apellido = $data["apellido"];
+            //$nombre = $data["nombre"];
+            //$apellido = $data["apellido"];
             $mail = $data['mail'];
             $clave = $data['clave'];
         
@@ -140,7 +140,8 @@
             }
         }
 
-        public function modificarUnUsuario($request, $response,array $args){
+        public function modificarUnUsuario($request, $response, array $args)
+        {
             $data = $request->getParsedBody();
             $id = $args['id'];
             $nombre = $data['nombre'];
@@ -151,11 +152,11 @@
             $sector = $data['sector'];
             $clave = $data['clave'];
             $mail = $data['mail'];
-        
+    
             $usuario = usuario::TraerUnUsuario($id);
             if ($usuario != false) {
                 $usuarioController = new usuarioController();
-                $resultado = $usuarioController->modificarUsuario($id,$nombre,$apellido,$dni,$estadoLaboral,$edad,$sector,$clave,$mail);
+                $resultado = $usuarioController->modificarUsuario($id, $nombre, $apellido, $dni, $estadoLaboral, $edad, $sector, $clave, $mail);
                 $payload = json_encode(array("Resultado Modificar" => $resultado));
                 $response->getBody()->write($payload);
                 return $response->withHeader('Content-Type', 'application/json');
@@ -174,6 +175,10 @@
             $response->getBody()->write($payload);
             return $response->withHeader('Content-Type', 'application/json');
         }
+
+      
+
+
      
     }
 ?>
