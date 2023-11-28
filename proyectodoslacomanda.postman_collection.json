@@ -1,0 +1,1027 @@
+{
+	"info": {
+		"_postman_id": "cadb8d41-c7c0-440f-8a72-b9546e470628",
+		"name": "proyectodoslacomanda",
+		"description": "segundo_parcial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29810521"
+	},
+	"item": [
+		{
+			"name": "CrearUsuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "marta",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "teran",
+							"type": "text"
+						},
+						{
+							"key": "dni",
+							"value": "454330681",
+							"type": "text"
+						},
+						{
+							"key": "estadoLaboral",
+							"value": "tiempo completo",
+							"type": "text"
+						},
+						{
+							"key": "edad",
+							"value": "42",
+							"type": "text"
+						},
+						{
+							"key": "sector",
+							"value": "bartender",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "lasadepapel11",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "lostan@gmial.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"crear"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ModificarUsuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "kervin",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "briceño",
+							"type": "text"
+						},
+						{
+							"key": "dni",
+							"value": "95933062",
+							"type": "text"
+						},
+						{
+							"key": "estadoLaboral",
+							"value": "temporal",
+							"type": "text"
+						},
+						{
+							"key": "edad",
+							"value": "45",
+							"type": "text"
+						},
+						{
+							"key": "sector",
+							"value": "cocina",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "tu_casa",
+							"type": "text"
+						},
+						{
+							"key": "mail",
+							"value": "el:espantapajaros@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios/modificarUsuario/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"modificarUsuario",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarUsuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios/eliminar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"eliminar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TraerUnUsuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios/traerUno/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"traerUno",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "traerUsuarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuarios/traerTodos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"traerTodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearMesa",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idMozo",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "codigoNumerico",
+							"value": "555554",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "desocupado",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/mesas/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mesas",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificarMesa",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "idMozo",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "codigoNumerico",
+							"value": "556",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "libre",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/mesas/modificar/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mesas",
+						"modificar",
+						"4"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarMesa",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mesas/eliminar/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mesas",
+						"eliminar",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "traerMesas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mesas/traerTodas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mesas",
+						"traerTodas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "traerUnaMesa",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mesas/traerUna/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mesas",
+						"traerUna",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CrearProducto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "bife",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "1500",
+							"type": "text"
+						},
+						{
+							"key": "tiempoElaboracion",
+							"value": "00:10:00",
+							"type": "text"
+						},
+						{
+							"key": "sector",
+							"value": "cocina",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/productos/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificarProducto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "pasta y ricota",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "1600",
+							"type": "text"
+						},
+						{
+							"key": "tiempoElaboracion",
+							"value": "00:15:00",
+							"type": "text"
+						},
+						{
+							"key": "sector",
+							"value": "cocina",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/productos/modificar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"modificar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarProducto",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/productos/eliminar/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"eliminar",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "traerProductos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/productos/traerTodos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"traerTodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TraerUnProducto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/productos/traerUno/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"traerUno",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoggearUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Luis",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "apellido",
+							"value": "González",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "mail",
+							"value": "luis.gonzalez@example.com",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "contrasenia123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/LoggearUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"LoggearUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearPedido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigoPedido",
+							"value": "87",
+							"type": "text"
+						},
+						{
+							"key": "productoId",
+							"value": "21",
+							"type": "text"
+						},
+						{
+							"key": "mesaId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "usuarioId",
+							"value": "11",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "hecho",
+							"type": "text"
+						},
+						{
+							"key": "tiempoOrden",
+							"value": "00:40:00",
+							"type": "text"
+						},
+						{
+							"key": "tiempoMaximo",
+							"value": "00:55:00",
+							"type": "text"
+						},
+						{
+							"key": "tiempoEntrega",
+							"value": "00:50:50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/pedidos/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pedidos",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificarPedido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "codigoPedido",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "productoId",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "mesaId",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "usuarioId",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "cocinando",
+							"type": "text"
+						},
+						{
+							"key": "tiempoOrden",
+							"value": "00:20:00",
+							"type": "text"
+						},
+						{
+							"key": "tiempoEntrega",
+							"value": "00:25:00",
+							"type": "text"
+						},
+						{
+							"key": "tiempoMaximo",
+							"value": "00:30:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/pedidos/modificar/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pedidos",
+						"modificar",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarPedido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pedidos/eliminar/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pedidos",
+						"eliminar",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "traerTodosPedido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pedidos/traerTodos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pedidos",
+						"traerTodos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "traerUnPedidos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pedidos/traerUno/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pedidos",
+						"traerUno",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cargarPedidosEnCSV",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pedidosCSV",
+							"type": "file",
+							"src": "/C:/xampp/htdocs/slim-php-deployment/pedidocsv.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/CSV/cargarPedidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"CSV",
+						"cargarPedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CSV/descargaPedidos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MDA1MjM3MjQsImV4cCI6MTcwMTEyMzcyNCwiYXVkIjoiMzNlNWM2ZmZmNjkxMDljZGI1MGYzOGRmNjVmMTk3ZDFkZmVhYjVjNCIsImRhdGEiOnsiaWQiOjMsIm5vbWJyZSI6Ikx1aXMiLCJhcGVsbGlkbyI6IkdvbnpcdTAwZTFsZXoiLCJkbmkiOjc4OTAxMjM0LCJlc3RhZG9MYWJvcmFsIjoiQ29udHJhdGFkbyIsImVkYWQiOjMwLCJzZWN0b3IiOiJDaGVmIiwibWFpbCI6Imx1aXMuZ29uemFsZXpAZXhhbXBsZS5jb20iLCJjbGF2ZSI6ImNvbnRyYXNlbmlhMTIzIn19.8BE5ycSE927NWJTk6Pc21lMW63I4jDqlGyjfn8nfhzc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/CSV/descargaPedidos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"CSV",
+						"descargaPedidos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
